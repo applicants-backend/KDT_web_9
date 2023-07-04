@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input 태그</title>
+</head>
+<body>
+    <!-- <div> 사용자에게 값을 입력 받을 때 사용 </div> -->
+    <h2> text type </h2>
+    <input type="text" name="name" placeholder="name." />
+    <input type="text" name="phone" placeholder="phone number." />
+
+
+    <!-- input tag 에선 type이 필수 속성 -->
+    <!-- name : 백엔드에 정보를 전송할때 name 속성을 사용하게 되는 순간이있다. -->
+    <!-- input tag 에 placeholder 가 있다. 문장을 출력 -->
+    <!-- placeholder : 인풋에 사용자가 어떠한 정보를 기입해야하는지에 알수있게 사용한다. -->
+
+    <h2> button type </h2>
+    <input type="button" value="submit" />
+    <button type="submit"> submit </button>
+
+    <!-- button tag 의 타입은 submit 이 기본값. -->
+    <!-- input tag에는 value 라는 속성이있다. -->
+    <!-- 버튼은 백에 데이터는 주지만 정보를 전송하는 기능이없어서 name 을 쓰지않아도된다. -->
+
+    <h2> password type </h2>
+    <br />
+    <input type="password" name="password" />
+
+    <h2> checkbox type </h2>
+    <input type="checkbox" name="hobby" value="baseball" /> baseball
+    <input type="checkbox" name="hobby" value="soccer" /> soccer
+
+    <h2> radio type </h2>
+    <input type="radio" name="gender" value="male" /> male
+    <input type="radio" name="gender" value="female" /> female
+
+    <h2> radio type with label </h2>
+    <input type="radio" name="favorite" value="baseball" id="baseball" /> <label for="baseball"> baseball </label>
+    <input type="radio" name="favorite" value="soccer" id="soccer" /> <label for="soccer"> soccer </label>
+
+
+
+</body>
+</html>
