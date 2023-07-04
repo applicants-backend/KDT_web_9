@@ -33,6 +33,8 @@
     <input type="checkbox" name="hobby" value="baseball" /> baseball
     <input type="checkbox" name="hobby" value="soccer" /> soccer
 
+    <!-- checked 를 사용하면 미리 체크가 된다. -->
+
     <h2> radio type </h2>
     <input type="radio" name="gender" value="male" /> male
     <input type="radio" name="gender" value="female" /> female
@@ -41,7 +43,28 @@
     <input type="radio" name="favorite" value="baseball" id="baseball" /> <label for="baseball"> baseball </label>
     <input type="radio" name="favorite" value="soccer" id="soccer" /> <label for="soccer"> soccer </label>
 
+    <h2> date type </h2>
+    <input type="date" name="birth" />
+    <input type="datetime-local" name="birth-time" />
 
+    <h2> select tag </h2>
+    <select name="select-name">
+        <optgroup label="option 1-2">
+            <option value="option 1"> option 1 </option>
+            <option value="option 2"> option 2 </option>
+        </optgroup>
+
+        <optgroup label="option 3-4">
+            <option value="option 3"> option 1 </option>
+            <option value="option 4"> option 2 </option>
+            <!-- disabled 를 붙히면 선택이 불가능해진다. -->
+        </optgroup>
+    </select>
+
+    <div>
+        <input type="text" name="email" value="ssss@c.s" readonly />
+        <!-- readonly => 변경이 불가능하다. 읽기만 가능 -->
+    </div>
 
 </body>
 </html>
