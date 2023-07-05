@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        :root {
+            /* css 변수를 선언할때는 :root 를 사용한다 = html 을 사용해도된다. */
+            /* 변수가 문서 전체에서 사용이 가능해지기 떄문에 root 사용 */
+            /* 변수 : 특정 값을 저장하는 공간 */
+            --main-color : orange;
+            --main-bg-color : blue;
+            --sub-color : rgb(148, 97, 97);
+            --fontsize-b : 30px;
+            /* 변수 이름의 규칙 -- (하이픈 두개로 시작해야함.) */
+        }
+        /* css 에서는 속성값을 변수화 할수있다 */
+        div {
+            color: var(--main-color);
+            font-weight: 100;
+            font-size: var(--fontsize-b);
+        
+        }
+        p {
+            background-color: var(--main-bg-color);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div>요로시쿠 오네가이시마스</div>
+    <p>잘부탁드립니다😌</p>
+    
+</body>
+</html>
