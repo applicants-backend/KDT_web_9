@@ -10,28 +10,59 @@
         }
         /* 별을 사용하면 모든 태그를 포함한다는 말이된다. */
         
-        li{
+        /* li{
             color: blue;
         }
-
         .strawberry{
             background-color: gray;
         }
-
         #ex {
             background-color: aqua;
+        } */
+        
+        li {
+            color: orange;
+            /* 아이디가 와도되고 태그도 가능하고 여러가지 편하게 선택을 하고 작성하면된다. */
         }
+
+        div > p {
+            /* div 의 자식중에서 p 태그를 가진것들을 선택할수있다. */
+            color: navy;
+        }
+        /* div > ul > .orange {
+            color: orange;
+        } */
+
+        div .orange {
+            background-color: red;
+        }
+        li.orange{
+            /* 띄어쓰기를 안하게되면 일치 선택자로 두가지를 동시에 선택하게된다. */
+            color: skyblue;
+        }
+        ul + div {
+            /* 인접형제 선택자 */
+            color: blueviolet;
+        }
+        .apple ~ li {
+            /* apple 클래스를 가진걸 선택하고 그 다음에 있는 li 태그를 가진 형제들을 선택하겠다. */
+            font-size: 30px;
+        }
+
 
     </style>
 </head>
 <body>
-    <div id="ex">안녕</div>
-    <span>Hello world</span>
-    <ul>
-        <li>사과</li>
-        <li class="strawberry">딸기</li>
-        <li>자몽</li>
-    </ul>
+    <div>
+        <ul>
+            <li class="apple">사과</li>
+            <li>딸기</li>
+            <li class="orange">오렌지</li>
+        </ul>
+        <div>당근</div>
+        <p>토마도</p>
+        <span class="orange">오렌지</span>
+    </div>
     
 </body>
 </html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selector 2</title>
+    <style>
+        * {
+            font-size: 30px;
+        }
+        a:hover {
+            color: red;
+            background-color: sienna;
+        }
+        a:active{
+            color: yellow;
+            background-color: black;
+        }
+        button:hover {
+            background-color: blue;
+            color: white;
+        }
+        button {
+            color: #564e4e
+        }
+        button:active{
+            background-color: yellowgreen;
+            color: black;
+        }
+        input:focus {
+            background-color: orchid;
+        }
+        .name-input:focus {
+            color: seagreen;
+            background-color: beige;
+        }
+        div .name-input:focus {
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="http://www.naver.com" target="_blank">naver</a>
+    <button type="button">submit</button>
+
+    <input type="text" name="name" placeholder="name" /> 
+    <div>
+        <input class="name-input" type="text" name="name" placeholder="name"/>
+    </div>
+</body>
+</html>
