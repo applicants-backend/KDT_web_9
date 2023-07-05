@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo elements</title>
+    <style>
+        .example::after {
+            content: "감사합니다☺️";
+        }
+        .example::before {
+            content: "안녕하세요😀";
+        }
+        /* [속성이름=속성값]{} */
+        /* [속성이름]{} */
+
+        [type="text"]{
+            background-color: green;
+        }
+        [disabled] {
+            color: white;
+            /* 인풋에 들어오는 밸류 값을 화이트로 변경된다. */
+        }
+        [value] {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="example">
+            잘부탁드립니다😌
+    </div>
+
+    <input type="text" value="HEROPY" />
+    <input type="password" value="1234" />
+    <input type="text" value="ABCD" disabled />
+    
+</body>
+</html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selector 3</title>
     <style>
-        .fruits div:first-child {
+        /* .fruits div:first-child {
             color: orange;
         }
         .fruits span:first-child {
@@ -14,7 +14,29 @@
         .fruits h3:last-child {
             color: red;
         }
+        .fruits *:nth-child(2) {
+            color: white;
+            background-color: rgb(60, 190, 60);
+        }
+        .fruits *:nth-child(2n) {
+            color: white;
+            background-color: rgb(60, 190, 60);
+        } */
+        /* .fruits *:nth-child(2n) {
+            color: white;
+            background-color: rgb(60, 190, 60);
+            2의 배수대로 바뀐다 (짝수)
+        }
+        .fruits *:nth-child(2n+1) {
+            color: black;
+            background-color: yellow;
+            홀수에 있는것들이 바뀐다
+        } */
+        .fruits *:not(span) {
+            color: seagreen;
+        }
         
+
     </style>
 
 </head>
