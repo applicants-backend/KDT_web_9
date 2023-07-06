@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css margin</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        #aaaa {
+            background-color: skyblue;
+            /* id 는 문서에서 한번만 사용해야한다. */
+        }
+        .block {
+            width: 200px;
+            height: 200px;
+            font-size: 2em;
+
+            margin-top: 100px;
+            margin-left: 100px;
+            margin-right: 50px;
+            margin-bottom: 20px;
+            /* margin : 100px 50px 20px 100px -> 위 오른쪽 아래 왼쪽 */
+            /* margin : 100px 20px -> 위아래 100px , 오른쪽 왼쪽 20px 이 된다. */
+            /* margin : 100px -> 모든 방향이 100px 이 된다. */
+
+            padding-top: 50px;
+            padding-left: 50px;
+            /* padding 도 똑같이 margin 과 같이 설정할수있다. */
+
+            background-color: red;
+            color: white;
+        }
+        .inline {
+            background-color: blue;
+            color: white;
+
+            margin-top: 100px;
+
+            /* padding: 50px 50px; */
+            width: 50px;
+        }
+        .max-width {
+            background-color: rgb(236, 49, 55);
+            color: black;
+            /* width: 50vw; */
+            /* height: 50px; */
+            /* max-width: 500px; */
+            max-height: 200px;
+            /* min-width: 100px; */
+            min-height: 100px;
+
+            /* width: calc(50vw-100px); */
+            padding: auto;
+            width: calc(20vw);
+            margin: auto;
+            font-size: 30px;
+            text-align: center;
+
+            line-height: 100px;
+            height: 100px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- margin 외부여백 padding 내부여백 --> 
+    <div class="block">Hello</div>
+    <span class="inline">Hello</span>
+    <div class="max-width">Hello</div>
+</body>
+</html>

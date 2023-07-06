@@ -26,27 +26,39 @@
            /* 기본값은 16px 이다. */
         }
         main {
-            font-size: 20px;
+            /* font-size: 20px; */
         }
         div {
-            font-weight: 700;
+            /* font-weight: 700; */
         }
         .font-px {
             font-size: 20px;
+            text-decoration: none;
         }
         .font-em {
             font-size: 1.5em;
             font-family: sans-serif;
+            text-decoration-line: line-through;
             /* 가장 가까운 요소의 폰트 사이즈를 요소로 한다. */
         }
         .font-rem {
             font-size: 1.5rem;
             line-height: 2;
+            text-decoration-line: underline;
             /* 가장 상위요소 (여기선 html) 의 폰트사이즈를 기준으로 한다. */
         }
-        .font_per {
+        .font-per {
             font-size: 100%;
+            color: rgb(75, 28, 177);
+            text-align: justify;
             /* ㄱoot (html) px 사이즈를 기준으로 함. */
+        }
+        a {
+            text-decoration: none;
+        }
+        .inline-block {
+            display: inline;
+            /* inline, block --- 등등은 display 요소이다. */
         }
 
     </style>
@@ -58,9 +70,19 @@
         <div class="font-rem">Hello World😀</div>
         <div class="font-per">Hello World😀</div>
     </main>
+    <a href="a">a tag</a>
     <div>안녕</div>
-    
-    
-    
+
+    <div>
+        <span></span>
+    </div>
+    <div style="background-color: aquamarine;">aquamarine</div>
+    <span style="background-color: aquamarine;">aquamarine</span>
+    <!-- 인라인 요소는 width 가 먹지않는다. height 요소도 먹지않는다. 블록 요소는 다 가능하다. -->
+    <!-- 인라인 요소에 width height 를 넣고싶다면 style 에서 inline-block 으로 설정해줘야한다. -->
+    <!-- 블록요소 안에 인라인 요소를 넣는것이 필요하다. -->
+    <!-- 인라인 요소는 마진값을 갖지않는다. -->
+    <!-- 블록요소는 weight height 사용가능  -->
+    <div style="display : inline-block; background-color: aquamarine;">aquaman</div>
 </body>
 </html>
