@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        .blue-box {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 1px solid white;
+            /* overflow 는 부모 박스에다가 걸어줌. */
+            /* overflow: hidden; */
+            /* overflow: auto; */
+            overflow: auto;
+        }
+
+        .brown-box {
+            width: 250px;
+            height: 100px;
+            background-color: brown;
+            margin-left: 50px;
+            margin-top: 50px;
+            border: 1px solid white;
+            /* display: inline; */
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="blue-box">
+        <div class="brown-box"></div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 5</title>
+    <style>
+         .box {
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            background-color: orange;
+        }
+
+        .content-box {
+            box-sizing: content-box;
+            border: 15px solid red;
+            margin: 20px;
+        }
+        .content-box:hover {
+            opacity: 0.7;
+        }
+
+        .border-box {
+            box-sizing: border-box;
+            border: 15px solid red;
+            margin: 20px;
+        }
+        .border-box:hover {
+            opacity: 0.7;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box content-box"></div>
+    <br /> <br /> 
+    <div class="box border-box"></div>
+
+    
+</body>
+</html>
