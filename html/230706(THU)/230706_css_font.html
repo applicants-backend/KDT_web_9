@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS_font</title>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> -->
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap'); */
+        @font-face {
+        font-family: 'TTWanjudaedunsancheB';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+        }
+        
+        :root {
+            font-size: 25px;
+            /* font-family: 'Noto Sans KR', sans-serif; */
+            font-family: 'TTWanjudaedunsancheB', serif;
+            font-weight: 700;
+            /* font weight 을 적어놓는 습관을 만들자 ex) 100,400,700 등등 */
+
+           /* 기본값은 16px 이다. */
+        }
+        main {
+            font-size: 20px;
+        }
+        div {
+            font-weight: 700;
+        }
+        .font-px {
+            font-size: 20px;
+        }
+        .font-em {
+            font-size: 1.5em;
+            font-family: sans-serif;
+            /* 가장 가까운 요소의 폰트 사이즈를 요소로 한다. */
+        }
+        .font-rem {
+            font-size: 1.5rem;
+            line-height: 2;
+            /* 가장 상위요소 (여기선 html) 의 폰트사이즈를 기준으로 한다. */
+        }
+        .font_per {
+            font-size: 100%;
+            /* ㄱoot (html) px 사이즈를 기준으로 함. */
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div class="font-px">Hello World😀</div>
+        <div class="font-em">Hello World😀</div>
+        <div class="font-rem">Hello World😀</div>
+        <div class="font-per">Hello World😀</div>
+    </main>
+    <div>안녕</div>
+    
+    
+    
+</body>
+</html>
