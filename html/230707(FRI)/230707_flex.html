@@ -6,16 +6,36 @@
     <title>Display flex</title>
     <style>
         .container {
+            height: 600px;
+            /* justify-content: space-around; 일정한 간격을 띄고있다 */
+            /* justify-content: space-evenly; 동일하게 마진값을 갖는다 */
+            /* justify-content: space-between; 최대한 간격이 벌어진다. */
+            flex-direction: column;
+
+            /* justify-content: space-evenly; */
             display: flex;
+
             flex-wrap: wrap;
+            align-items: center;
+
+            /* center, flex-end, flex-start 가 있다. */
             /* flex-direction: column-reverse; */
             /* row 가 기본값이다. */
             /* row-reverse -> 반대에서 시작함 */
             /* column-reverse -> 아래에서 시작함 */
             /* display : flex 는 자기 자식요소를 inline 요소로 만든다. */
         }
+        .container-1 {
+            height: 600px;
+            /* justify-content: space-evenly; */
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
 
-        .container > div {
+            align-content: flex-start;
+        }
+
+        .container > div , .container-1 > div {
             width: 100px;
             height: 100px;
             /* display: inline-block; */
@@ -37,6 +57,25 @@
         <div class="red"></div>
         <div class="orange"></div>
         <div class="yellow"></div>
+
+        <div class="red"></div>
+        <div class="orange"></div>
+        <div class="yellow"></div>
+
+        <div class="red"></div>
+        <div class="orange"></div>
+        <div class="yellow"></div>
+    </div>
+<br />
+    <div class="container-1">
+        <div class="red"></div>
+        <div class="orange"></div>
+        <div class="yellow"></div>
+
+        <div class="red"></div>
+        <div class="orange"></div>
+        <div class="yellow"></div>
+
         <div class="red"></div>
         <div class="orange"></div>
         <div class="yellow"></div>
