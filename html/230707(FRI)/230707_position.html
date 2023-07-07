@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+
+        body {
+            margin: 0;
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: greenyellow;
+            margin-top: 10px;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        .r-1 {
+            /* 기준점은 왼쪽 위 꼭짓점이다. */
+            left: 50px;
+            top: 50px;
+            background-color: red;
+
+            /* bottom: 50px;
+            right: 50px; */
+            /* 음수값도 가능하다. */
+        }
+        .r-2 {
+            background-color: blue;
+            bottom: -50px;
+        }
+        .r-3 {
+            background-color: yellow;
+            right: -10px;
+        }
+        
+        .parents {
+            position: relative;
+            width: auto;
+            background-color: aquamarine;
+            height: 200px;
+        }
+
+        .absolute.a-1 {
+            /* 부모에 있는 relative 를 찾아서 그걸 기준으로한다.
+            아무리 찾아도 없다면 좌측상단을 기준으로 한다. 
+            부모의 영역이 어디까지인지 파악해야 한다. 그것을 기준으로 한다.
+            만약 부모영역이 없다면 view port 화면 전체가 된다. */
+            position: absolute;
+            background-color: orange;
+            /* left: 10px;
+            top: 30px; */
+            right: 10px;
+            bottom: 0;
+        }
+        .absolute.a-2 {
+            position: absolute;
+            background-color: palevioletred;
+            right: 150px;
+            bottom: 50px;
+        }
+
+        .fixed {
+            /* 내부 바 같은걸 만들고싶을때 사용한다. 스크롤을 내려도 고정된다. */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100px;
+            background-color: blueviolet;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <!-- <header></header>
+    <main></main> 여기서 margin top 을 주어 header 의 fixed 와 안겹치게한다.
+    <footer></footer> -->
+
+    <div class="relative r-1"></div>
+    <div class="relative r-2"></div>
+    <div class="relative r-3"></div>
+
+    <div class="parents">
+        <div class="absolute a-1"></div>
+        <div class="absolute a-2"></div>
+    </div>
+    <div class="fixed"></div>
+    
+</body>
+</html>

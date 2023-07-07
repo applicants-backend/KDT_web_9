@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Answer</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+        }
+
+        .container > div {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+        }
+
+        .one {
+            position: relative;
+            background-color: rgb(92, 92, 185);
+        }
+        .two {
+            position: absolute;
+            background-color: rgb(53, 53, 140);
+            top: 50px;
+            left: 50px;
+        }
+        .three {
+            position: absolute;
+            background-color: rgb(28, 28, 137);
+            top: 80px;
+            left: 100px;
+        }
+        .four {
+            position: absolute;
+            background-color: rgb(11, 11, 86);
+            top: 100px;
+            left: 150px;
+        }
+        .five {
+            position: absolute;
+            background-color: rgb(2, 2, 50);
+            top: 100px;
+            left: 200px;
+            z-index: 1;
+        }
+        .img {
+            position: absolute;
+            top: 130px;
+        }
+
+        .white-eye {
+            position: absolute;
+            background-color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            top: 15px;
+            left: 15px;
+        }
+        .black-eye {
+            position: absolute;
+            background-color: black;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            top: 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="one">
+            <div class="white-eye"> 
+                <div class="black-eye"></div>
+            </div>
+        </div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+        <div class="five"></div>
+        <div class="img"><img src="../../image folder/grass.png" width="350px" height="100px"></div>
+    </div>
+    
+</body>
+</html>

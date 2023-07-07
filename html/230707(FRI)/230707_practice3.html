@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 3</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            background-color: black;
+        }
+
+        .item {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+        }
+
+        .one {
+            background-color: aqua;
+        }
+
+        .two {
+            background-color: plum;
+            top: 30px;
+            left: 30px;
+        }
+        .three {
+            background-color: fuchsia;
+            top: 60px;
+            left: 60px;
+        }
+
+        .z-1 {
+            z-index: 1;
+        }
+        .z-2 {
+            z-index: 2;
+        }
+        .z-3 {
+            z-index: 3;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item one z-1"></div>
+        <div class="item two z-2"></div>
+        <div class="item three z-3"></div>
+    </div>
+
+    <br /> <br />
+
+    <div class="container">
+        <div class="item one z-1"></div>
+        <div class="item two z-3"></div>
+        <div class="item three z-2"></div>
+    </div>
+    
+</body>
+</html>

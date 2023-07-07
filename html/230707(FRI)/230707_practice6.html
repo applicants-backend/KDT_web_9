@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 6</title>
+    <style>
+        body {
+            margin: 20px 20px;
+        }
+        .container {
+            background-color: black;
+            display: flex;
+            width: 500px;
+            height: 500px;
+        }
+        
+        .container-rr {
+            background-color: black;
+            display: flex;
+            flex-direction: row-reverse;
+            width: 500px;
+            height: 500px;
+            flex-wrap: wrap;
+        }
+
+        .container-co {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            width: 500px;
+            height: 500px;
+            flex-wrap: nowrap;
+        }
+
+    
+
+        .item {
+            width: 100px;
+            height: 100px;
+        }
+        .one {
+            background-color: blue;
+        }
+        .two {
+            background-color: violet;
+        }
+        .three {
+            background-color: greenyellow;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item one"></div>
+        <div class="item two"></div>
+    </div>
+
+    <br />
+
+    <div class="container-rr">
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item one"></div>
+        <div class="item two"></div>
+    </div>
+
+    <br />
+
+    <div class="container-co">
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item one"></div>
+        <div class="item two"></div>
+        <div class="item three"></div>
+        <div class="item one"></div>
+        <div class="item two"></div>
+    </div>
+    
+</body>
+</html>
