@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+
+        img {
+            width: 100px;
+            height: 100px;
+            transition-property: transform;
+            transition-duration: 5s;
+            /* transition-timing-function: ease-out cubic-bezier(0.075, 0.82, 0.165, 3); */
+        }
+
+        img#translate:active {
+            transform: translate(100px, 40px);
+        }
+        img#scaleX:active {
+            transform: scaleX(2);
+        }
+        img#rotate:active {
+            transform: rotate(45deg);
+        }
+        img#back:active {
+            transform: rotateX(180deg);
+            backface-visibility: hidden;
+        }
+        img#skew:active {
+            transform: skewY(-45deg);
+            /* transition-delay: 2s linear 3s; */
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            margin-left: 0;
+            transition: all 2s;
+            background-color: red;
+            overflow: auto;
+        }
+        .box:hover {
+            width: 200px;
+            height: 200px;
+            margin-left: 100px;
+
+        }
+
+    </style>
+</head>
+<body>
+
+    <div>
+        <img 
+        id="translate"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"/>
+        <img 
+        id="scaleX"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"/>
+        <img 
+        id="rotate"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"/>
+        <img 
+        id="back"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"/>
+        <img 
+        id="skew"
+        src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA3MDVfMjI4%2FMDAxNjU2OTkzMDM3NzM5.nX8G42IYgt90OwlAOIQ6G-GNalrSOmLvaJCG4_oXyjMg.g1obojagiLCknlPmEaksUSTX7hp5McYDrAUsQXL6PCkg.JPEG.prince0198%2FDSC02985.jpg&type=sc960_832"/>
+        <div class="box"></div>
+    </div>
+
+</body>
+</html>
