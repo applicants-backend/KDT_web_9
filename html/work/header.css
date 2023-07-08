@@ -39,11 +39,15 @@
   */
   /* header1 */
   .header1 {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      align-content: flex-start;
   }
   
   /* header2 */
   .header2 {
-    display: none;
+    display: flex;
   }
   
   /* header3 */
