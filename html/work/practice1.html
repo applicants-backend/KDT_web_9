@@ -60,6 +60,63 @@
     .menus-3 li {
       margin: 0px 10px;
     }
+
+/* 
+    .header4 {
+      display: flex;
+      flex: 1;
+    }
+
+    .menus-4 li {
+      margin: 0px 10px;
+    }
+    .menu-left {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+    menu-right {
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    } */
+    .header4 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  
+}
+
+.menus-4 {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.menus-4 li {
+  margin: 0px 10px;
+}
+
+ul.menu-right {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-right li {
+  margin-left: 5px;
+}
+
+.header4 ul li {
+  padding: 5px;
+
+}
+    
     
     </style>
 <body>
@@ -98,17 +155,15 @@
     <h4>header 4는 선택입니다!</h4>
     <!-- header4 -->
     <header class="header4">
-      <div class="menu-left">
         <span>LOGO</span>
-        <ul>
+        <ul class="menus-4">
           <li>MENU1</li>
           <li>MENU2</li>
           <li>MENU3</li>
         </ul>
-      </div>
       <ul class="menu-right">
         <li>LOGIN</li>
-        <li>SIGNUUP</li>
+        <li>SIGNUP</li>
       </ul>
     </header>
   </body>
