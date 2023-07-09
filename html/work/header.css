@@ -20,9 +20,10 @@
     padding: 0;
     list-style: none;
   }
+
   li {
     margin: 0px 10px;
-  }
+    }
   
   h1 {
     text-align: center;
@@ -35,43 +36,45 @@
     padding: 0 20px;
     margin-bottom: 50px;
     align-items: center;
-    display: flex;
+
+  }
+
+  span {
 
   }
   
+  .menus {
+    display: flex; 
+  }
+
   /* TODO: header1 ~ 4까지 완성해주세요! 
       - 편의를 위해 header2 ~ 4는 display: none 처리를 해두었습니다.
       - 해당 header 작업할 때 display: none 코드를 지워서 작업하면 됩니다!
   */
+
   /* header1 */
+
   .header1 {
     display: flex;
  }
 
-  .menus {
-    display: flex;
-    
-  }
   
   .m1 {
-    display: flex;
     justify-content: flex-end;
   }
 
   /* header2 */
   .header2 {
+    display: flex;
     justify-content: space-between;
   }
   
   /* header3 */
   .header3 {
-    display: flex;
-  }
-  .header3 > ul {
-    justify-content: center;
+
   }
   
   /* header4 */
   .header4 {
-    display: flex;
+
   }
