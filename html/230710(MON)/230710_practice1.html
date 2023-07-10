@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Practice 1</title>
     <style>
+
          div {
             position: absolute;
             width: 100px;
             height: 100px;
             background-color: aqua;
-            animation: movetoright 3s linear infinite alternate;
+            animation: movetoright 3s linear;
             border-radius: 50%;
             animation-iteration-count: 6;
-            animation-fill-mode: forwards;
+            /* animation-fill-mode: forwards; */
         }
-
+        
 
         @keyframes movetoright {
             from {
@@ -26,7 +27,7 @@
             }
 
             0% {
-                left: 0px;
+                left: 0px; top: 0px;
             }
             25% {
                 left: 200px; top: 0px;
@@ -47,7 +48,6 @@
 </head>
 <body>
     <div>
-
     </div>
     
 </body>

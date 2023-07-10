@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        let animals = ["dog" , "cat","lion"];
+
+        // 객체에 특이한걸 붙히는 object 를 지정해준다.
+
+        let cat = {
+            age : 5 ,
+            name :  "고냥이" ,
+            mew : function() {
+                console.log("냐옹");
+            }
+        }
+        console.log(cat)
+        console.log(cat.age)
+        cat.mew() // 함수 이름적고 괄호를 적어줘야한다. (함수를 실행시키기 위해서 이렇게적음, 괄호의 여부가 실행 여부가 된다.)
+
+        let dog = {
+            name : `초코`,
+            
+        }
+        console.log(dog.age) // object 내에서 없는 속성을 출력하면 undefined 라고 뜬다.
+        console.log(dog.name)
+
+        console.log(typeof cat.age)
+        console.log(typeof cat.name)
+        console.log(typeof cat.mew) // 함수는 function 이라는 자료형 으로 나온다.
+
+        console.log(typeof dog.age) // undefined => undefined 자료형으로 나온다.
+        console.log(typeof null)  // null => object 자료형으로 나온다.
+
+        // let score1 = prompt ("첫번째 성적을 입력하세요.")
+        // let score2 = prompt ("두번째 성적을 입력하세요.")
+
+        // console.log(score1, score2)
+
+        // // Number () , toString ()
+        // let avg = (Number(score1) + Number(score2)) / 2;
+        // console.log(avg)
+
+        let num = 5;
+
+        console.log(String(null))
+        console.log(num.toString(), 5)
+
+        console.log(Number("123"))
+        console.log(Number("abcde"))
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
