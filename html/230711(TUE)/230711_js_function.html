@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS function</title>
+   
+</head>
+<body>
+    <script>
+        // 함수 선언
+        // 함수를 만든다고해서 함수의 내용이 실행되는건 아니다.
+        function sayHello () { // 함수 선언문
+            console.log("hello");
+        }
+        // 호출을 해야 실행됨.
+        sayHello()
+
+
+        let sayHello2 = function () { // 익명함수., 함수 표현식
+            console.log("hello2")
+        }
+        sayHello2()
+
+        let sayHello3 = () => {
+            console.log("hello3")
+        }
+        sayHello3()
+    </script>
+
+    <script>
+        // 매개변수가 없고 반환값도 없는 함수
+        // 매개변수란 ? 함수 외부에서 사용한 변수, 값 등을 함수 내부로 전달하고 싶을 때 사용
+        // 함수 내부로 전달하고 싶을 때 사용
+
+        // 반환값이란? 함수 내부에서 생성된 변수, 값 등을 함수 외부로 전달하고 싶을때 사용
+        // 함수 외루보 전달하고 싶을 때 사용
+        
+        // 1. 매개변수가 없고ㅡ 반환값도 없음.
+        function aaa () {
+            console.log("aaa")
+        }
+        aaa () // 실행시키게 되면 이자리에 남는게없다. 
+
+        // 2. 매개변수가 없고, 반환값이 있음
+        function bbb () {
+            return ("bbb")
+        }
+        bbb () // bbb를 실행시키면 남는값이 없다.
+
+        console.log(bbb())
+        let str = bbb()
+
+        // 3. 매개변수가 있고, 반환값이 없음.
+        let number1 = 5;
+        let number2 = 3;
+        function ccc( num1 , num2 ) {
+            console.log( num1 + num2 )
+        }
+        ccc (5 , 3)
+        ccc (number1 , "hello")
+
+        let sayMyName = function (name) {
+            console.log(`Hello, ${name}`)
+        }
+        sayMyName()
+
+        // 4. 매개변수가 있고, 반환값이 있음. (매개변수 1개), 반환값 존재)
+        
+        function ddd (num1) {
+            return 5 + num1
+        }
+        ddd(5)
+        let num = ddd(5)
+        console.log(num)
+
+        let sum = (num1 , num2) => {
+            let num = num1 + num2
+            let mul = num * 5;
+            return mul;
+        }
+        let sumMul = sum(3, 6)
+        console.log(sumMul)
+
+    </script>
+</body>
+</html>

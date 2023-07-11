@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js practice 4</title>
+</head>
+<body>
+    <script>
+
+        let age = Number(prompt("나이를 입력해주세요."))
+        let gender = (prompt(`성별을 입력해주세요. "남" "여" 로 기록해주세요`))
+
+        // function gender () {
+        //     if (gender = "남") {("남성입니다.")} 
+        //     else if (gender = "여"){("여성입니다. ")}
+        // }
+        
+
+        if (age >= 20) {
+            alert(`성인 ` + gender)
+        } 
+        else if (age >= 17) {alert("고등학생 " + gender)}
+        else if (age >= 14) {alert("중학생 " + gender)}
+        else if (age >= 8) {alert("초등학생 " + gender)}
+        else if (age >= 0) {alert("유아 " + gender)}
+
+    </script>
+    <div></div>
+</body>
+</html>
