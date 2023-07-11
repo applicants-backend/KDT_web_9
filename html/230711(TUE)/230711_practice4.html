@@ -9,21 +9,22 @@
     <script>
 
         let age = Number(prompt("나이를 입력해주세요."))
-        let gender = (prompt(`성별을 입력해주세요. "남" "여" 로 기록해주세요`))
+        let gender = (prompt(`성별을 입력해주세요. "남자" "여자" 로 기록해주세요`)) 
 
-        // function gender () {
-        //     if (gender = "남") {("남성입니다.")} 
-        //     else if (gender = "여"){("여성입니다. ")}
+        // if ( age >= 20 ) {
+        //     if (gender == "여자") {
+        //         alert(`성인 여자`)
+        //     } else {
+        //         alert(`성인 남자`)
+        //     }
         // }
         
-
-        if (age >= 20) {
-            alert(`성인 ` + gender)
-        } 
+        if (age >= 20) { alert(`성인 ` + gender)} 
         else if (age >= 17) {alert("고등학생 " + gender)}
         else if (age >= 14) {alert("중학생 " + gender)}
         else if (age >= 8) {alert("초등학생 " + gender)}
         else if (age >= 0) {alert("유아 " + gender)}
+        else {alert("잘못 입력 하셧습니다.")}
 
     </script>
     <div></div>
