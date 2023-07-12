@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js method</title>
+</head>
+<body>
+    <script>
+        let str = "Happy Day~!";
+        console.log(str.length);
+
+        console.log(str.toUpperCase());
+        console.log(str.toLowerCase());
+
+        console.log(str.indexOf("e"))
+
+        console.log(str.slice()) // slice(시작인덱스, 끝인덱스) 문자열 잘라주기.
+
+        console.log(str.replace('p','s')) // 대체해준다. replace('p','a')
+        console.log(str.replaceAll('p','s')) // 대체해준다. replace('p','a')
+
+        console.log(str.repeat(2)) // 
+
+        console.log(str.trim()) 
+
+        // '이름' / '성별' / '전화번호'
+        // 2023-07-12 // 
+        console.log(str.split('a'))
+
+        console.log()
+
+        let hello = "Hello world"
+        let helloReverse = hello.split("").reverse().join()
+        
+        // [스플릿안에 저렇게 하면 각자의 스펠링을 보관주]
+        // []
+
+        console.log(helloReverse)
+
+        console.log(hello.split("").reverse().join("/"))
+
+        
+
+    </script>    
+</body>
+</html>

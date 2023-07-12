@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js date</title>
+</head>
+<body>
+    <script>
+        let now = new Date() 
+        let expired = new Date ('2023-06-07') // 만료일 구할때 사용.
+
+        console.log(now) // 2023-07-12 (Wed) 기준
+        
+        console.log(now.getFullYear()) // 2023
+
+        console.log(now.getMonth()+1) // 주의 getMonth 는 실제 월 -1 됌.
+
+        console.log(now.getDate()) // 일수가 나옴
+
+        console.log(now.getDay()) // 3 -> Wed
+
+        console.log(now.getTime() > expired.getTime()) // 
+
+
+        let year = now.getFullYear();
+        let month = now.getMonth()+1;
+        let date = now.getDate();
+
+        console.log(`${now.getFullYear()}-${now.getMonth()+1}-${now.getDate()}`)
+
+        console.log(`${year}-${month >= 10 ? month : "0"+month}-${date >= 10 ? date : "0"+date}`)
+
+
+    </script>
+    
+</body>
+</html>

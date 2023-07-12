@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 1</title>
+</head>
+<body>
+    <script>
+        // let array = [];
+        // let arr1 = [];
+        // let arr2 = [];
+        // let arr3 = [];
+
+        // for (let i = 1; i <=100; i++) {
+        //     array.push(i)
+        // }   console.log(array)
+
+        // arr2 = 0;
+        // for (let arr of array) {
+        //     arr2 += arr
+        //     // array.push(arr)
+        // }   // console.log(arr)
+        // console.log(arr2)
+
+        // array.forEach(element => {
+            
+        // });
+
+        let numbers = [];
+        for (let i=1; i<=100; i++) {
+            numbers.push(i);
+        }   console.log(numbers);
+
+        sum = 0;
+        for (let i=0; i<numbers.length; i++) {
+            sum += numbers[i];
+        }
+        console.log(sum)
+
+        sum = 0;
+        for (let n of numbers) { // forOf 문과 forEach 문은 배열이 있을때 사용가능하다.
+            sum += n;
+        }
+
+        sum = 0;
+        numbers.forEach((data) => {
+            sum += data;
+        })
+        console.log(sum)
+
+
+    </script>
+    
+</body>
+</html>
