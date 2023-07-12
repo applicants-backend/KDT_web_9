@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice 3</title>
+    <style>
+        .container{
+            width: 500px;
+            height: 200px;
+            border: 5px;
+            border-color: black;
+        }
+    </style>
+</head>
+<body>
+    <h1>방명록 입니다.</h1>
+
+    <div>작성자
+        <input type="text" name="name" id="writer">
+    </div>
+
+    <div>내용
+        <input style="width: 500px;" type="text" name="content" id="content">
+    </div>
+
+    <br><br>
+
+    <button type="button" onclick="addRow()">
+        작성
+    </button>
+
+    <br>
+
+    <table border="1" cellspacing="1" cellpadding="20">
+      <thead>
+        <tr>
+          <td id="NumTd">번호</td>
+          <td id="writerTd">작성자</td>
+          <td id="contentTd">내용</td>
+          <td id="time">작성일</td>
+        </tr>
+      </thead>
+
+      <tbody></tbody>
+    </table>
+    
+    <script>
+        let num = 1;
+
+        function addRow () {
+            let table = document.querySelector("table");
+
+            // tr 태그 생성
+            let tr = document.createElement("tr")
+
+            // 번호 td 
+            let NumTd = document.createElement("td")
+            NumTd.innerText = num;
+
+            // 작성자 td
+            let writerTd = document.createElement("td")
+            let writer = document.getElementById("writer").value;
+            writerTd.innerText = writer;
+
+            // 이부분에 내용, 작성일 td
+            let content = document.getElementById("content").value;
+            let contentTd = document.createElement("td")
+            contentTd.innerText = content;
+
+
+            let dateTd = document.createElement("td")
+            let date = new Date()
+            let dateStr = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}-${date.getHours()}-${date.getMinutes()}`
+            dateTd.innerText = dateStr;
+
+            // tr의 자식으로 td태그 추가하기
+            tr.appendChild(NumTd)
+            tr.appendChild(writerTd)
+            tr.appendChild(contentTd)
+            tr.appendChild(dateTd)
+
+            table.appendChild(tr)
+            num++;
+
+        }
+        console.log(addRow)
+    </script>
+
+    
+</body>
+</html>

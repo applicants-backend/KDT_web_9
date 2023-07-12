@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+        }
+        .red {
+            background-color: red;
+        }
+        .orange {
+            background-color: orange;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="red" class="box red"></div>
+    <div id="orange" class="box orange"></div>
+    <div class="box yellow"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+
+    <input type="text"  name="id" />
+    
+    <script>
+        let redBoxById = document.getElementById("red") // 하나만 담긴다.
+        console.log(redBoxById)
+
+        let boxes = document.getElementsByClassName("box") // class 는 여러개가 올수있기때문에 무조건 배열로 온다.
+        console.log(boxes)
+
+        let boxesByTag = document.getElementsByTagName("div") // 무조건 배열에 담긴다.
+        console.log(boxesByTag)
+
+        let input = document.getElementsByName("id") // 이것또한 배열로 담긴다.
+        console.log(input)
+
+        let boxesBySelector = document.querySelector(".box") // 요소만 선택 (제일 위에있는것 선택한다.)
+        console.log(boxesBySelector)
+
+        let boxesBySelectorAll = document.querySelectorAll(".box") // 전체를 다 선택하겠다 해서 배열로 담긴다.
+        console.log(boxesBySelectorAll)
+
+        let orangeBySelectorAll = document.querySelectorAll(".orange")
+        console.log(orangeBySelectorAll)
+
+
+    </script>
+    
+</body>
+</html>

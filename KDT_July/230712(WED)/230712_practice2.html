@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+</head>
+<body>
+    <div>값 1 : <input type="text" id="text1" value="" /></div>
+    <div>값 2 : <input type="text" id="text2" value=""/></div>
+    <div>연산자 : <input type="text" id="op" value=""/></div>
+    <div>결과 : <input type="text" id="result" value="" /></div>
+
+    <button type="button" onclick="calculate(result)">계산하기</button>
+    <button type="button" onclick="calculate">초기화</button>
+
+    <script>
+        function calculate () {
+            let num1 = Number(document.getElementById(("text1")).value);
+            let num2 = Number(document.getElementById(("text2")).value);
+            let op = document.getElementById("op").value;
+            let result = 0;
+
+            switch(op) {
+                case "+": result = num1 + num2;
+                    break;
+                case "-": result = num1 - num2;
+                    break;
+                case "*": result = num1 * num2;
+                    break;
+                case "/": result = num1 / num2;
+                    break;
+            }
+            // document.getElementById()
+            document.getElementById("result").value = result
+            console.log(result)
+
+        }
+
+    </script>
+    
+</body>
+</html>
