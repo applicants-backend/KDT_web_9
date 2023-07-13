@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <title>practice1</title>
+    <style>
+        .container {
+        width: 500px;
+        height: 500px;
+        text-align: center;
+      }
+      #img {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+    
+</head>
+<body>
+
+    
+
+    <div class="container" style="background-color: gray;">
+
+        <button id="Apple" onclick="changeImage">Apple</button>
+        <button id="Banana" onclick="imgBanana">Banana</button>
+        <button id="Grape" onclick="imgGrape">Grape</button>
+        <button id="Peach" onclick="imgPeach">Peach</button>
+
+      </div>
+
+      <script>
+        
+
+        let AppleImg = document.getElementById("Apple").src = "../../image folder/apple.jpeg";
+        let Banana = document.getElementById("Banana").src = "../../image folder/banana.jpeg";
+        let Grape = document.getElementById("Grape").src = "../../image folder/grape.jpeg";
+        let Peach = document.getElementById("Peach").src = "../../image folder/peach.jpeg";
+
+        Apple.addEventListener('click' , () => {
+            document.querySelector(".img").addEventListener("src", "../../image folder/apple.jpeg")
+        }) 
+        Banana.addEventListener('click' , () => {   
+            document.querySelector(".img").addEventListener("src", "../../image folder/banana.jpeg")
+        }) 
+        Grape.addEventListener('click' , () => {
+            document.querySelector(".img").addEventListener("src", "../../image folder/grape.jpeg")
+        }) 
+        Peach.addEventListener('click' , () => {
+            document.querySelector(".img").addEventListener("src", "../../image folder/peach.jpeg")
+        }) 
+
+      </script>
+
+    
+    
+</body>
+</html>
