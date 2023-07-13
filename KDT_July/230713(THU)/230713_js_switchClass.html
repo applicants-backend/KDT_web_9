@@ -20,6 +20,7 @@
         .box {
             width: 100px;
             height: 100px;
+            cursor: pointer;
         }
         .red {
             background-color: red;
@@ -27,17 +28,61 @@
         .orange {
             background-color: orange;
         }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .navy {
+            background-color: navy;
+        }
+        .purple {
+            background-color: purple;
+        }
+
+
 
     </style>
 </head>
 <body>
-    <div class="box orange"></div>
+    <div class="box"></div>
     <button type="button" onclick="switchColor()">바껴라</button>
 
     <script>
-        function switchColor() {
-            $(".box").switchClass("orange", "red", 1000)
-        }
+        let clickButton = document.querySelector("div.box")
+        function changeColor() {
+            let currentColor = box.style.color;
+            let newColor;
+            if (box.style.color === "red") {
+                newColor = "orange";
+            } else if(box.style.code == "orange") { 
+                newColor   = "yellow";
+            }else if(box.style.code == "yellow") { 
+                newColor   = "green";
+            }else if(box.style.code == "green") { 
+                newColor   = "blue";
+            }else if(box.style.code == "blue") { 
+                newColor   = "navy";
+            }else if(box.style.code == "navy") { 
+                newColor   = "purple";
+            }
+            todo.style.color = newColor;
+        };
+        
+
+        // function switchColor() {
+        //     $(".box").switchClass("red", "orange", 1000)
+        //     $(".box").switchClass("orange", "yellow", 1000)
+        //     $(".box").switchClass("yellow", "green", 1000)
+        //     $(".box").switchClass("green", "blue", 1000)
+        //     $(".box").switchClass("blue", "navy", 1000)
+        //     $(".box").switchClass("navy", "purple", 1000)
+
+        // }
 
     </script>
     
