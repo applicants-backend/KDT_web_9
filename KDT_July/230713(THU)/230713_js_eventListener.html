@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event Listener</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" 
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" 
+            crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <div class="container">
+        <input type="text" id="id" name="id" />
+        <input type="text" id="pw" name="pw" />
+    </div>
+    <button type="button">click</button>
+
+    <script>
+        window.addEventListener("load", function () { })
+
+        // $(function () {
+        //   $(".container").append(`<h1>안녕</h1> `)
+        // })
+
+        // $().on("mouseover", function() {
+        // })
+
+        $("button").on("click" ,function() {
+            alert("click!")
+        })
+
+        // $("button").click(function() {
+        //     alert("click!")
+        // })
+
+        // $("button").hover(function() {
+        //     alert("click")
+        // })
+        
+        $("window").scroll(function() {
+            console.log("scrolling")
+        })
+
+        // $("input").keydown(function(e){
+        //     console.log(e.key === "Enter")
+        // })
+
+        // $("input").keyup(function(e){
+        //     console.log(e.key === "Enter")
+        // })
+        
+        $("input").keyup((e) => {
+
+        })
+
+    </script>
+
+</body>
+</html>

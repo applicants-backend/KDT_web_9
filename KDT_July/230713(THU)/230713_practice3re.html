@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" 
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" 
+            crossorigin="anonymous">
+    </script>
+
+    <style>
+
+    </style>
+
+</head>
+<body> 
+    <div class="date">날짜
+        <input type="text" name="date" id="date">
+    </div>
+    <div class="comment">내용
+        <input type="text" name="comment" id="comment">
+    </div>
+    
+    <button class="write" type="button" onclick="">write</button>
+
+    <table class="calendar" border="1">
+
+        <h1 class="title">2023년 7월</h1>
+        <div class="day">
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+            <th>Saturday</th>
+            <th>Sunday</th>
+        </div>
+        <div class="date">
+            <tr>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+                <td><p></p></td>
+
+            </tr>
+        </div>
+
+    <script>
+        // td 에 this 를 남아놓기.
+        let td = null ;
+
+            $("td").on("click", function (obj){
+                console.log(this)
+                td = this;
+                let date = $(this).text()
+                console.log(date)
+                $("#date").val(date)
+            })
+            function schedule () {
+                let content = "content"
+
+            }
+
+    </script>
+    
+</body>
+</html>

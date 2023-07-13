@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice3</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+            integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" 
+            crossorigin="anonymous">
+    </script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" 
+            integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" 
+            crossorigin="anonymous">
+    </script>
+    <style>
+        th {
+            width: 100px;
+            height: 100px;
+        }
+        td {
+            width: 100px;
+            height: 100px;
+            pointer-events: all;
+            cursor: pointer;
+        }
+        table > th:first-child {color: red;}
+        table > tr > td:first-child {color: red;}
+
+        button {
+            
+            width: 100px;
+            height: 100px;
+        }
+        .submitt {
+            width: 80px;
+            height: 20px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="date">날짜
+        <input type="text" name="date" id="date">
+    </div>
+    <div class="comment">내용
+        <input type="text" name="comment" id="comment">
+    </div>
+    
+    <button class="submitt" type="button" onclick="">submit</button>
+
+    <table class="calendar" border="1">
+
+        <h1 class="title">2023년 7월</h1>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+        <th>Saturday</th>
+        <th>Sunday</th>
+
+        <tr>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick="">1</button></td>
+        </tr>
+        <tr>
+            <td><button class="submitBtn" type="button" onclick="">2</button></td>
+            <td><button class="submitBtn" type="button" onclick="">3</button></td>
+            <td><button class="submitBtn" type="button" onclick="">4</button></td>
+            <td><button class="submitBtn" type="button" onclick="">5</button></td>
+            <td><button class="submitBtn" type="button" onclick="">6</button></td>
+            <td><button class="submitBtn" type="button" onclick="">7</button></td>
+            <td><button class="submitBtn" type="button" onclick="">8</button></td>
+        </tr>
+        <tr>
+            <td><button class="submitBtn" type="button" onclick="">9</button></td>
+            <td><button class="submitBtn" type="button" onclick="">10</button></td>
+            <td><button class="submitBtn" type="button" onclick="">11</button></td>
+            <td><button class="submitBtn" type="button" onclick="">12</button></td>
+            <td><button class="submitBtn" type="button" onclick="">13</button></td>
+            <td><button class="submitBtn" type="button" onclick="">14</button></td>
+            <td><button class="submitBtn" type="button" onclick="">15</button></td>
+        </tr>
+        <tr>
+            <td><button class="submitBtn" type="button" onclick="">16</button></td>
+            <td><button class="submitBtn" type="button" onclick="">17</button></td>
+            <td><button class="submitBtn" type="button" onclick="">18</button></td>
+            <td><button class="submitBtn" type="button" onclick="">19</button></td>
+            <td><button class="submitBtn" type="button" onclick="">20</button></td>
+            <td><button class="submitBtn" type="button" onclick="">21</button></td>
+            <td><button class="submitBtn" type="button" onclick="">22</button></td>
+        </tr>
+        
+        <tr>
+            <td><button class="submitBtn" type="button" onclick="">23</button></td>
+            <td><button class="submitBtn" type="button" onclick="">24</button></td>
+            <td><button class="submitBtn" type="button" onclick="">25</button></td>
+            <td><button class="submitBtn" type="button" onclick="">26</button></td>
+            <td><button class="submitBtn" type="button" onclick="">27</button></td>
+            <td><button class="submitBtn" type="button" onclick="">28</button></td>
+            <td><button class="submitBtn" type="button" onclick="">29</button></td>
+        </tr>
+
+        <tr>
+            <td><button class="submitBtn" type="button" onclick="">30</button></td>
+            <td><button class="submitBtn" type="button" onclick="">31</button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+            <td><button class="submitBtn" type="button" onclick=""></button></td>
+        </tr>
+        </table>
+
+        <script>
+
+            $("td").on("click", function() {
+                console.log(this)
+                console.log( $(this).text() )
+            })
+
+            $("td").on("click", function (obj){
+                let date = $(this).text()
+                console.log(date)
+                $("#date").val(date)
+            })
+
+        </script>
+    
+</body>
+</html>
