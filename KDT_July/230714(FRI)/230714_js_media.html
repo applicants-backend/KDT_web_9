@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+
+    <!-- <style>
+        body {
+            background-color: indianred;
+            color: white;
+        }
+        .box {
+            font-size: 100px;
+
+        }
+        /* @media + media 유형 and (크기 조건) {} */
+        /* 유형에는 screen, all (모든 조건 요소) */
+        /* 뒤에 크기조건은 max-min-width, / height 조건도 온다. (하지만 가로조건은 잘 안함.) */
+        /* max width : 오른쪽에 나온 숫자값 이하일때 */
+        /* min width : 오른쪽에 나온 숫자값 이상일떄 */
+        /* 없는 정의에 대해 추가할수있으며 바뀌는 값만 추가하면된다. */
+
+        @media screen and  (max-width: 700px) {
+            body {
+                background-color: green;
+            }
+        }
+
+        @media screen and  (max-width: 500px) {
+            body {
+                background-color: pink;
+            }
+        }
+
+        @media screen and  (max-width: 300px) {
+            body {
+                background-color: black;
+            }
+        }
+
+        @media print {
+            .box {
+                display: none;
+            }
+        }
+
+    </style> -->
+
+    <!-- <style>
+        body {
+            background-color: black;
+        }
+
+        @media screen and (min-width : 300px) {
+            body {
+                background-color: salmon;
+            }
+        }
+
+    </style> -->
+
+    <style>
+
+        @media screen and (orientation: landscape) {
+            body {
+                background-color: red;
+            }
+        }
+        @media screen and (orientation: portrait) {
+            body {
+                background-color: blue;
+            }
+        }
+            
+        
+
+    </style>
+
+</head>
+<body>
+        <div>하이</div>
+</body>
+</html>

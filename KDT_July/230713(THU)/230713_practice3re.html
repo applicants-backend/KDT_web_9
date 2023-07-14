@@ -14,10 +14,41 @@
             integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" 
             crossorigin="anonymous">
     </script>
+<style>
+    table {
+        width: 500px;
+        height: 100px;
+    }
+    
 
-    <style>
+    h1 {
+        color: green;
+        text-align: center;
+    }
+    th {
+        width: auto;
+        height: 60px;
+    }
 
-    </style>
+    td {
+        text-align: center;
+    }
+
+    .sun {
+        color: red;
+    }
+    .sat {
+        color: blue;
+    }
+
+    .day {
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        
+    }
+    
+</style>
 
 </head>
 <body> 
@@ -34,25 +65,25 @@
 
         <h1 class="title">2023년 7월</h1>
         <div class="day">
-            <th>Monday</th>
-            <th>Tuesday</th>
-            <th>Wednesday</th>
-            <th>Thursday</th>
-            <th>Friday</th>
-            <th>Saturday</th>
-            <th>Sunday</th>
+            <div class="sun">Sunday</div>
+            <div>Monday</div>
+            <div>Tuesday</div>
+            <div>Wednesday</div>
+            <div>Thursday</div>
+            <div>Friday</div>
+            <div class="sat">Saturday</div>
         </div>
         <div class="date">
             <tr>
+                <td class="sun"><p>1</p></td>
                 <td><p></p></td>
                 <td><p></p></td>
                 <td><p></p></td>
                 <td><p></p></td>
                 <td><p></p></td>
-                <td><p></p></td>
-                <td><p></p></td>
-
+                <td class="sat"><p>0</p></td>
             </tr>
+            
         </div>
 
     <script>
@@ -66,6 +97,7 @@
                 console.log(date)
                 $("#date").val(date)
             })
+
             function schedule () {
                 let content = "content"
 
