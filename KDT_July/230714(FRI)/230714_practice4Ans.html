@@ -1,19 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>practice4Ans</title>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>header 만들기</title>
+    <script
+      src="https://kit.fontawesome.com/837ff3adc1.js"
+      crossorigin="anonymous"
+    ></script>
     <style>
+      :root {
+        --nav-height-lg: 100px;
+        --nav-height-sm: 60px;
+      }
 
-    </style>
-</head>
-<body>
+      body {
+        margin: 0;
+      }
 
-    <script>
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
 
+      /* HEADER */
+      header {
+        width: 100%;
+        height: var(--nav-height-lg);
+        z-index: 100;
+        /* position: fixed; */
+      }
+
+      /* 768px 보다 클때의 header */
+      header .inner {
+        background-color: lightblue;
+        height: 100px;
+        display: flex;
+        align-items: center;
+      }
+
+      /* LOGO */
+      header .inner .logo {
+        color: white;
+        font-size: 30px;
+        margin-left: 90px;
+      }
+
+      header .inner .menu {
+        display: flex;
+        margin: 0 auto;
+      }
+
+      header .inner .menu li {
+        font-weight: bold;
+        margin: 7px;
+      }
+
+      /* 미디어 쿼리 작성 768px 이하일 때  */
+      @media screen and (max-width: 768px) {
+        header .inner {
+        height: 60px;
+        justify-content: center;
+        position: relative;
+      }
+
+      header .inner .menu {
+        position: absolute;
+        display: block;
+        width: 100%;
+        top: 60px;
+        text-align: center;
+        background-color: rgb(224, 244, 253);
+      }
+
+      header .inner .menu li {
+        font-weight: 200;
+        margin: 10px;
+      }
         
-    </script>
-    
-</body>
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="inner">
+        <div class="logo">
+          <i class="fa-solid fa-igloo"></i>
+        </div>
+        <ul class="menu">
+          <li>메뉴1</li>
+          <li>메뉴2</li>
+          <li>메뉴3</li>
+          <li>메뉴4</li>
+        </ul>
+        <div class="logo"></div>
+      </div>
+    </header>
+  </body>
 </html>
