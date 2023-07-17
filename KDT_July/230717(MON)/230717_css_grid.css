@@ -44,8 +44,8 @@
 
 }
 .item {
-    /* width: 100px;
-    height: 100px; */
+    width: 100px;
+    height: 100px;
 }
 .red {
     grid-area: header;
