@@ -1,0 +1,92 @@
+.container {    
+    display: grid;
+
+    height: 500px;
+
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(3, 200px);
+
+    grid-template-areas: 
+    'header header header'
+    'nav main aside'
+    'footer footer footer';
+
+    /* grid-template-columns: repeat(3, 200px); */
+    /* grid-template-rows: repeat(3, 200px) ; */
+
+    /* grid-template-columns: repeat(3, minmax(100px,auto)); */
+
+    /* 가로줄 정렬시 몇  열이 될지에 대한 결정 
+    repeat 이라는 함수도 사용 가능하다. 
+    repeat (3, 200px) 으로도 사용 가능하다. 
+    1fr = 2칸으로 만들겠다. 50퍼센트씩 나눠가지겠다는것 분할수를 의미. (3, 1fr) , (2, 1fr)
+    gride template rows 도 똑같이한다.
+
+    minmax 는 최솟값, 최댓값 지정. auto는 최대한 넓힐만큼 넓힌다.
+    */
+
+    /* row-gap: 20px;
+    column-gap: 20px; */
+     
+    /* gap: 20px; */
+    /* justify-items: center;
+    align-items: center; */
+    /* place-items: center; */
+
+    /* ~~~-items : items 요소 (자식 요소) 가 존재할 수 있는 영역에서만 사용 가능. */
+    /* align-content: 1fr; */
+
+    /* justify-content: center; */
+     /* justify 는 가로축기준으로 정렬할수있다. 하나의 그리드를 통째로 함. */
+    /* align-content: center; */
+    /* place-content: center; 도 사용가능하다 */
+    /* ????-content : container 영역 내에서 부모 요소 자체를 통째로 정렬이 가능하다. */
+
+}
+.item {
+    /* width: 100px;
+    height: 100px; */
+}
+.red {
+    grid-area: header;
+    /* order: 1; */
+    background-color: red;
+    /* grid-column: 1 / 4; */
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+    /* grid-column : auto / span3 ;  */
+    /* place-self: center; */
+}
+.orange {
+    grid-area: nav;
+    /* order: 2; */
+    background-color: orange;
+    /* place-self: center; */
+    /* grid-row: 2 / 4; */
+    /* grid-row: auto / span2; */
+}
+.yellow {
+    grid-area: main;
+    background-color: yellow;
+    /* justify-self: center;
+    align-self: center; */
+    /* place-self: ; */
+
+}
+.green {
+    grid-area: aside;
+    background-color: green;
+    /* width: 500px;
+    z-index: 1; */
+}
+.blue {
+    grid-area: footer;
+    background-color: blue;
+}
+.navy {
+    background-color: navy;
+}
+.purple {
+    background-color: purple;
+    /* order: -1; */
+}
