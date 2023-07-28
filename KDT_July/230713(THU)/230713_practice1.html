@@ -1,86 +1,47 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
-    <title>practice1</title>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    
     <style>
-        /* .container {
-        width: 500px;
-        height: 500px;
-        text-align: center;
-      }
-      #img {
-        width: 100%;
-        height: 100%;
-      } */
-      div {
-        width: 300px;
-        height: 300px;
-      }
-      
-      .apple {
-        background-image:  ("../../image folder/apple.jpeg");
-      }
-      .banana {
-        background-image: "../../image folder/banana.jpeg";
-      }
-      .grape {
-        background-image: "../../image folder/grape.jpeg";
-      }
-      .peach {
-        background-image: "../../image folder/peach.jpeg";
-      }
-      
-
-    </style>
-    
-</head>
-<body>
-
-    
-  <img src="../../image folder/apple.jpeg" width="300" height="300" />
-    <div class="box">
-      <button type="button" onclick="changeFruits('apple')">apple</button>
-      <button type="button" onclick="changeFruits('banana')">banana</button>
-      <button type="button" onclick="changeFruits('grape')">grape</button>
-      <button type="button" onclick="changeFruits('peach')">peach</button>
-
-        <!-- <button id="Apple" >Apple</button>
-        <button id="Banana" >Banana</button>
-        <button id="Grape" >Grape</button>
-        <button id="Peach" >Peach</button> -->
-
-      </div>
-
-      <script>
-        function changeFruits() {
-          $("img").attr("src.") .removeClass().addClass(fruit)
+        div {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
         }
 
+        .apple {
+            background-image: url('/imageFolder/apple.jpeg');
+        }
+        .banana {
+            background-image: url('/imageFolder/banana.jpeg');
+        }
+        .grape {
+            background-image: url('/imageFolder/grape.jpeg');
+        }
+        .peach {
+            background-image: url('/imageFolder/peach.jpeg');
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="apple"></div> -->
+    <img src="/imageFolder/apple.jpeg" width="300" height="300" />
+    <br />
+    <button type="button" onclick="changeFruits('apple')">사과</button>
+    <button type="button" onclick="changeFruits('banana')">바나나</button>
+    <button type="button" onclick="changeFruits('grape')">포도</button>
+    <button type="button" onclick="changeFruits('peach')">복숭아</button>
 
-        // let Apple = document.getElementById("Apple").src = "../../image folder/apple.jpeg";
-        // let Banana = document.getElementById("Banana").src = "../../image folder/banana.jpeg";
-        // let Grape = document.getElementById("Grape").src = "../../image folder/grape.jpeg";
-        // let Peach = document.getElementById("Peach").src = "../../image folder/peach.jpeg";
-
-        // Apple.addEventListener('click' , () => {
-        //     document.querySelector(".img").addEventListener(".src", "../../image folder/apple.jpeg")
-        // }) 
-        // Banana.addEventListener('click' , () => {   
-        //     document.querySelector(".img").addEventListener(".src", "../../image folder/banana.jpeg")
-        // }) 
-        // Grape.addEventListener('click' , () => {
-        //     document.querySelector(".img").addEventListener(".src", "../../image folder/grape.jpeg")
-        // }) 
-        // Peach.addEventListener('click' , () => {
-        //     document.querySelector(".img").addEventListener(".src", "../../image folder/peach.jpeg")
-        // }) 
-
-      </script>
-
-    
-    
+    <script>
+        function changeFruits(fruit) {
+            $("img").attr("src", `/imageFolder/${fruit}.jepg`)
+        }
+    </script>
 </body>
 </html>
