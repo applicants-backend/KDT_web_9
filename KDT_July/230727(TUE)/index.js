@@ -6,7 +6,7 @@
 
 const http = require('http');
 
-const fs = require('fs').promises;
+const fs = require('fs');
 
 //req 요청 es 응답
 const server = http.createServer(function(req, res) {
