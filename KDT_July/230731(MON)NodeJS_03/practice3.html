@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback hell</title>
+</head>
+<body>
+    <script>
+        // CallBack hell
+        // setTimeout(function() {
+        //     document.body.style.backgroundColor = 'red'
+        //     setTimeout(function() {
+        //         document.body.style.backgroundColor = 'orange'
+        //         setTimeout(function() {
+        //             document.body.style.backgroundColor = 'yellow'
+        //             setTimeout(function() {
+        //                 document.body.style.backgroundColor = 'green'
+        //                 setTimeout(function() {
+        //                     document.body.style.backgroundColor = 'blue'
+
+        //                 },1000);
+        //             },1000);
+        //         },1000);
+        //     },1000);
+        // },1000);
+
+        function red () {
+                return new  Promise ((resolve,reject) => {
+                    setTimeout(() => {
+                        document.body.style.backgroundColor = 'red'
+                        resolve();
+                    },1000)
+                })
+            }
+            function orange () {
+                return new  Promise ((resolve,reject) => {
+                    setTimeout(() => {
+                        document.body.style.backgroundColor = 'orange'
+                        resolve();
+                    },900)
+                })
+            }
+            function yellow () {
+                return new  Promise ((resolve,reject) => {
+                    setTimeout(() => {
+                        document.body.style.backgroundColor = 'yellow'
+                        resolve();
+                    },800)
+                })
+            }
+            function green () {
+                return new  Promise ((resolve,reject) => {
+                    setTimeout(() => {
+                        document.body.style.backgroundColor = 'green'
+                        resolve();
+                    },700)
+                })
+            }
+            function blue () {
+                return new  Promise ((resolve,reject) => {
+                    setTimeout(() => {
+                        document.body.style.backgroundColor = 'blue'
+                        resolve();
+                    },600)
+                })
+            }
+            console.log(red())
+
+            red().then((res) => {
+                return orange()
+            }).then((res) => {
+                return yellow()
+            }).then((res) => {
+                return green()
+            }).then((res) => {
+                return blue()
+            })
+
+    </script>
+    
+</body>
+</html>

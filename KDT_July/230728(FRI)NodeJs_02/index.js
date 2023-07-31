@@ -25,6 +25,16 @@ app.get('/kdt9', (req , res) => {
     // 렌더링 => 데이터를 쭉 읽어나간다.
 });
 
+app.get('/practice1', (req,res) => {
+    res.render('practice1')
+})
+
+
+app.get('/practice2', (req,res) => {
+    res.render('practice2')
+})
+
+
 // listen => 서버를 열어준다.
 app.listen(PORT, () => {
     console.log(`http://localhost:$(PORT)`)
