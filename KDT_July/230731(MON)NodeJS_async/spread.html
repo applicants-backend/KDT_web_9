@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // spread 연산자
+        const a = [1,2,3]
+        const b = [4,5];
+
+        // 기존방식 : concat 내장함수를 이용
+        const concat = a.concat(b);
+        console.log(`concat`, concat);
+
+        const spread = [...b,...a];
+        console.log(`spread`, spread);
+
+        const Person = {
+            name : `minhyun`,
+            age : 28,
+        }
+        console.log({...Person});
+        const c = `Hello`;
+        console.log({...c});
+
+        function get(a, ...rest) {
+            console.log(a, rest) // 나머지 연산자
+        }
+        get(10,20,30,40,50);
+
+    </script>
+    
+</body>
+</html>

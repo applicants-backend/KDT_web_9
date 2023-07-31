@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring assignment</title>
+</head>
+<body>
+    <script>
+        // 배열 구조 분해
+        const lists = ['apple','grape'];
+
+        // 기존 방식
+        console.log(lists[0],lists[1]);
+
+        // 구조 분해
+        [item1, item2] = lists;
+        console.log('item1 :', item1, 'item2 :', item2);
+        item1 = 'peach';
+        console.log(item1);
+
+        // 교환
+        let x = 1, y = 3;
+
+        // const 를 사용하면 안된다.
+        [x, y] = [y, x];
+
+        console.log(x,y);
+
+        // 객체
+        const Person ={
+            // key : value
+            name : `minhyun`,
+            age : 19,
+            gender : `male`,
+            friends : [`lee`,`kim`],
+            hello : function () {
+                console.log('hello')
+            },
+        };
+        Person.age = 20;
+        console.log(Person.age);
+        console.log(Person.name);
+        console.log(Person.friends[0]);
+        Person.hello();
+        
+        console.log(Person['name']);
+        console.log(Person['kdt-9']); // 이것처럼 특수문자가 있을시에 배열안에 넣어서 문장으로 검색해주어야한다.
+
+        Person['city']="Seoul";
+        Person.city="Seoul"; // 똑같다.
+
+        console.log(Person);
+
+        const {name, city, key = `hi` , age:myAge} = Person;
+        
+        console.log(name, city, key, myAge); // age 가 아니라 myAge 를 사용해주어야한다.
+
+        // const persons = [{},{},{},{}]
+        
+
+    </script>
+    
+</body>
+</html>
