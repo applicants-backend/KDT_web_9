@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1><%= title %></h1>
+    <h4>Get 요청</h4>
+    <form action="/getform" method="get">
+        <input type="text" placeholder="id" name="id" required>
+        <input type="password" placeholder="pw" name="pw" required> 
+        <button type="submit">제출</button>
+        <!-- html 에는 required 로 만들어놓으면 조작이 가능하다. -->
+        <!-- 유효성 검사는 상당히 중요하다. -->
+    </form>
+    <hr/>
+    <form action="/postForm" method="post">
+        <input type="text" placeholder="id" name="id">
+        <input type="password" placeholder="pw" name="pw" pattern="^([a-z0-9]{8,12})^">
+        <button type="submit">제출</button>
+
+        <br/><hr />
+        <!-- number 타입으로 하면 숫자 키패드만 열림. -->
+        <input type="email"><br /><hr />
+        <input type="radio"><br /><hr />
+        <input type="checkbox"><br /><hr />
+        <input type="tel"><br /><hr />
+        <input type="number"><br /><hr />
+        <input type="date"><br /><hr />
+        <input type="datetime"><br /><hr />
+        <input type="time"><br /><hr />
+        <input type="color"><br /><hr />
+
+        <button type="submit">제출</button>
+    </form>
+</body>
+</html>

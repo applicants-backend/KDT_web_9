@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        span {
+            color: blueviolet;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+
+    <h1><%=title%></h1>
+    <div><span><%=userInfo.name%></span>님 환영합니다.</div>
+    <div>성별은 <span><%=userInfo.gender%></span>이시며.</div>
+    <div>생일은 <span><%=userInfo.birth%></span>출생이시고</div>
+    <div><span><%=userInfo.favor%></span>를 좋아하시는군요!!</div>
+    <div><span><%=userInfo.favorCol%></span>를 좋아하시는군요!!</div>
+    <div><span><%=userInfo.favorNum%></span>를 좋아하시는군요!!</div>
+    <div>역시 축구에서 명문은 <span><%=userInfo.favorTeam%></span>죠</div>
+    <br />
+    <br />
+    <a href="/">홈으로 이동</a>
+
+    
+</body>
+</html>
