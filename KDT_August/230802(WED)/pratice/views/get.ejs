@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practice1</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js" integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <h1>axios Get 실습</h1>
+    <form name="register" id="register">
+        <fieldset>
+            <label for="">이름 : </label>
+            <input type="text" placeholder="name" id="name" required>
+        </fieldset>
+        <br/><hr />
+
+        <fieldset>
+            <legend>성별</legend>
+            <input type="radio" name="gender" value="남성" id="male">
+            <label for="male">남자</label>
+
+            <input type="radio" name="gedner" value="여성" id="female">
+            <label for="female">여자</label>
+        </fieldset>
+        <br/><hr />
+
+        <fieldset>
+            <legend>생년월일</legend>
+            <input type="date" name="birth" id="birth">
+        </fieldset>
+        <br/><hr />
+
+        <fieldset>
+            <legend>관심사</legend>
+            <input type="checkbox" placeholder="favor" name="favor" value="travel" id="travel">여행
+            <input type="checkbox" placeholder="favor" name="favor" value="fassion" id="fassion">패션
+            <input type="checkbox" placeholder="favor" name="favor" value="food" id="food">음식
+        </fieldset>
+        <br/><hr />
+
+        <button type="button" onclick="axiosGet()">회원가입</button>
+    </form>
+
+    <br/>
+    <br/>
+    <a href="/">홈으로 이동</a>
+    <div class="result"></div>
+
+    <script>
+        const resultBox = document.querySelector('.result');
+
+        function axiosGet () {
+            console.log('axios get')
+
+            // 폼 선택하기
+            const form = document.forms['register']
+            const data= {
+                name : form.name.value,
+                gender : form.gender.value,
+                birth : form.birth.value,
+                favor : form.favor.value,
+            }
+            const formID = document.getElementById['register']
+
+            const favor = []
+            const checked = formID.querySelectorAll('input[type="ckeckbox"]:checked')
+            checked.array.forEach(element => {
+                favor.push(element.value);
+            });
+            console.log(data)
+
+            axios ({
+                method : 'GET',
+                url : 'axios', 
+                prams : data,
+
+            }).then((res) => {
+                const { name , gender , birth , favor } = res.data;
+                console.log('res', res) 
+            })
+            
+        }
+
+    </script>
+    
+</body>
+</html>
