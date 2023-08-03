@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>file upload practice</h1>
+    <form action="/result" method="post" enctype="multipart/form-data">
+        <fieldset style="width: 500px;">
+            <legend>회원가입</legend>
+            <label for="userID">아이디</label>
+            <input type="text" name="userId" id="userId" /><br />
+            <label for="pw">패스워드</label>
+            <input type="password" name="pw" id="pw" /><br />
+            <label for="userName">이름</label>
+            <input type="text" name="userName" id="userName" /><br />
+            <label for="age">나이</label>
+            <input type="number" name="age" id="age" /><br />
+            <label for="proFIle">프로필 사진 :</label>
+            <input type="file" name="profile" id="profile"><br />
+            <button type="reset">reset</button>
+            <button type="submit">회원가입</button><br />
+        </fieldset>
+        <br />
+    </form>
+    
+</body>
+</html>

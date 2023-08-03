@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 1</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <fieldset style="width: 500px;">
+        <legend>회원가입</legend>
+        아이디 <input type="text" id="id" /><br />
+        비밀번호 <input type="password" id="password" /><br />
+        이름 <input type="text" id="name" /><br />
+        나이 <input type="number" id="age" /><br />
+        프로필 사진 : <input type="file" id="userImg"><br />
+        <button type="reset">reset</button>
+        <button type="button" onclick="fileUpload()">회원가입</button><br />
+    </fieldset>
+    <br />
+
+    <div class="result"></div>
+
+    <script>
+        const resultBox = document.querySelector('.result')
+
+        function fileUpload() {
+            const id = document.getElementById('id');
+            const password = document.getElementById('password');
+            const name = document.getElementById('name');
+            const age = document.getElementById('age');
+            const file = document.getElementById('userImg');
+            console.log(file.files);
+            
+            const formData = new FormData();
+            formData.append('id', id.value);
+            formData.append('password', password.value);
+            formData.append('name', name.value);
+            formData.append('age', age.value);
+            formData.append('userImg', file.files[0]);
+
+            axios({
+                method : 'POST',
+                url : '/userImg',
+                data : formData,
+                headers : {
+                    'Content-Type' : 'multipart/form-data'
+                }
+            }).then((res) => {
+                console.log('res', res.data)
+                console.log(formData)
+            })
+        }
+    </script>
+
+    
+</body>
+</html>
