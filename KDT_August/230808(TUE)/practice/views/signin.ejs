@@ -4,22 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <h1>로그인</h1>
-    <form name="form_login">
+    <form name="form-login">
         <label for="userid">ID</label>
-        <input type="text" id="userid"><br />
+        <input type="text" id="userid" placeholder="아이디" /><br />
         <label for="pw">PW</label>
-        <input type="text" id="pw"><br />
+        <input type="password" id="pw" placeholder="패스워드" /><br />
         <button type="button" onclick="login()">로그인</button>
     </form>
-    <form action="/user/profile" method="POST" name="form_profile">
-        <input type="hidden" name="profile">
+    <form action="/user/profile" method="post" name="form-profile">
+        <input type="hidden" name="userid">
     </form>
+    <br />
+
 
     <script>
-        
+        function login () {
+            const form = document.forms['form-login']
+            axios({
+                method : 'POST',
+                url : '/user/signin',
+                data : {
+                    userid : form.userid.value,
+                    pw : form.pw.value,
+                }
+            }).then((res) => {
+                console.log('res', res)
+                if(res.data.result) {
+                    alert('로그인 성공')
+                    const form_profile = document.forms['form-profile'];
+                    form_profile.userid.value = form.userid.value;
+                    form_profile.submit();
+                }else {
+                    // 페이지 다시가기 window.location.href = 'user/signin'
+                    // 페이지 새로고침 window.location.reload()
+                    form.reset();
+                }
+            })
+        }
     </script>
     
 </body>
