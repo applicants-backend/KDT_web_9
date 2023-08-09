@@ -1,5 +1,8 @@
-const express = require('express');
-const controller = require('../controller/Cuser')
+
+import express from 'express';
+
+import * as controller from '../controller/Cuser.js';
+
 const router = express.Router();
 
 router.get('/', controller.index);
@@ -16,8 +19,8 @@ router.post('/signin', controller.post_signin);
 
 router.post('/profile', controller.post_profile)
 router.patch('/profile/edit', controller.edit_profile)
-router.post('/profile/delete', controller.delete_profile)
+router.delete('/profile/delete', controller.delete_profile)
 
 
 
-module.exports = router;
+export default router;

@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const app = express();
 const PORT = 8000;
 
@@ -9,7 +9,7 @@ app.use(express.json());
 
 //router
 
-const userRouter = require('./routes/user');
+import userRouter from './routes/user.js';
 app.use('/user', userRouter);
 
 app.use('*', (req, res) => {

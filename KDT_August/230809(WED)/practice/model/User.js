@@ -1,58 +1,63 @@
 
-const mysql = require('mysql');
+import mysql from 'mysql2/promise';
 
-// mysql connect
-const conn = mysql.createConnection ({
+const conn = mysql.createPool ({
     host:'127.0.0.1',   
     user:'minhyun',
     password:'aledma010@',
     database:'kdt9',
     port:3306,
 })
-
-conn.connect((err) => {
-    if (err) {
-        console.log(err);
-        return;
+// mysql connect
+// createConnection : 단일연결, 매번 연결이 필요할때마다 새로운 연결을 생성한다.
+// 연결이 많아지면 성능에 영향이 생김.
+// createPool : 여러연결, 여러개의 연결을 미리 생성하고 관리
+// 요청이 들어올때마다 생성한 연결을 할당. 동시처리 가능
+export const post_signup = async(data) => {
+    try {
+        const query = 'INSERT INTO user (userid, pw, name) VALUES (?, ?, ?)';
+        await conn.query(query , [data.userid, data.pw, data.name])
+    } catch (error) {
+        console.log(error)
     }
-    console.log('connect');
-});
-
-exports.post_signup = (data, callback) => {
-    const query = `INSERT INTO user (userid, pw, name) VALUES ('${data.userid}', '${data.pw}', '${data.name}')`;
-    conn.query(query, (err, rows) => {
-        console.log('post_signup', rows);
-        callback();
-    });
 };
 
-exports.post_signin = (data, callback) => {
-    const query = `SELECT * FROM user WHERE userid='${data.userid}' AND pw='${data.pw}'`;
-    conn.query(query, (err, rows) => {
-        console.log('post_signin', rows);
-        callback(rows);
-    });
-};
 
-exports.post_profile= (data,callback) => {
-    const qurey = `SELECT * FROM user WHERE userid='${data.userid}'`;
-    conn.query(qurey, (err, rows) => {
-        console.log('post_profile', rows);
-        callback(rows);
-    })
-};
-exports.edit_profile = (data,callback) => {
-    const query = `UPDATE user SET userid='${data.userid}', pw='${data.pw}' , name='${data.name}' WHERE id='${data.id}'`;
-    conn.query(query, (err, rows) => {
-        console.log('edit_profile', rows);
-        callback(rows);
-    })
-};
-
-exports.delete_profile = (id,callback) => {
-    const query = `DELETE FROM user WHERE id='${id}'`
-    conn.query(query, (err,rows) => {
-        callback();
-    })
+export const post_signin = async (data) => {
+    try {
+        const query = 'SELECT * FROM user WHERE userid = ? AND pw = ?'
+        const [rows] = await conn.query(query , [data.userid, data.pw]);
+        console.log(rows);
+        return rows;
+    } catch (error) {
+        console.log(error)
+    }
 }
+
+export const post_profile = async (data) => {
+    try {
+        const query = 'SELECT * FROM user WHERE userid = ?'
+        const[rows] = await conn.query(query, [data.userid]);
+        return rows;
+    } catch (error) {
+        console.log(error);
+    };
+};
+export const edit_profile = async (data) => {
+    try {
+        const query = 'UPDATE user SET userid=?, pw=?,, name=?, WHERE id=?';
+        await conn.query(query, [data.userid, data.pw, data.name, data.id]);
+    } catch (error) {
+        console.log(error);
+    }
+};
+
+export const delete_profile = async (id) => {
+    try {
+        const query = 'DELETE FROM user WHERE id=?';
+        await conn.query(query, [data.id]);
+    } catch (error) {
+        console.log(error);
+    };
+};
 
