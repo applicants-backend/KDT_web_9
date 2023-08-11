@@ -4,4 +4,4 @@ const controller = require('../controller/Cstudent');
 
 router.get('/', controller.main)
 
-// module.exports = controller
+module.exports = router;

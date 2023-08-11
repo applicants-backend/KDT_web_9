@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = 8000;
+const db = require('./models/index')
 
 app.set('view engine','ejs');
 app.use(express.urlencoded({extended:true}));
