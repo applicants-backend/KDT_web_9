@@ -12,14 +12,14 @@ const secret = 'secretKey'
 
 app.get('/', (req,res) => {
     res.render('index');
-})
+});
 
 app.post('/login', (req,res) => {
     const{ id, pw } = req.body
 
     const token = jwt.sign({id},secret);
     res.send({result:true, token});
-})
+});
 
 app.post('/verify', (req,res) => {
     console.log(req.headers.authorization);
