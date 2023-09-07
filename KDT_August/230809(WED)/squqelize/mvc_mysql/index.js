@@ -12,6 +12,7 @@ app.use(express.json());
 // const indexRouter = require('./routes');
 // app.use('/', indexRouter);
 const visitorRouter = require('./routes/visitor');
+
 app.get('/', (req, res) => {
     res.render('index');
 });
